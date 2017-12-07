@@ -7,7 +7,7 @@
 
 country_code = 'UK'
 asin = 'B074XDBCK3'
-voice_recorder_title = 'Digital voice recorder, DREAMRY 8GB 1536Kbps USB Sound Audio Recorder Multifunctional Portable HD Recording Double Microphone Rechargeable Dictaphone/Noise Cancelling/Voice Activated/LCD Screen, Digital Audio MP3 Player for Recording Interviews, Meeting, Class, Lectures, Conferences and Conversation (Black)'
+voice_recorder_title = 'Digital Voice Recorder, DREAMRY 8GB USB Sound Audio Recorder, Voice Activated Recoder, Multifunctional Portable HD Recording Double Microphone Rechargeable Dictaphone/Noise Cancelling for lecture'
 
 #Anglink
 #country_code = 'UK'

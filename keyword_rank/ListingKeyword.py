@@ -24,6 +24,7 @@ voice_recorder_keyword = [
 {'audio recorder hidden':'Short Keyword'},
 {'digital recorder audio':'Short Keyword'},
 {'digital audio recorder':'Short Keyword'},
+{'digital voice recorder 8gb':'Short Keyword'},
 {'audio recorder pc':'Short Keyword'},
 {'voice recorder with usb':'Long Tail Keyword'},
 {'audio recorder usb':'Long Tail Keyword'},
