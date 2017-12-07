@@ -279,7 +279,7 @@ if __name__ == '__main__':
   
     profile.update_preferences()
 #     driver = webdriver.Firefox(firefox_profile=profile)
-    driver = webdriver.Firefox(executable_path = '/Users/spring8743/Documents/workspace/geckodriver/0.19.1/bin/geckodriver')
+    #driver = webdriver.Firefox(executable_path = '/Users/spring8743/Documents/workspace/geckodriver/0.19.1/bin/geckodriver')
         
 #     asin = 'B002NSMFOQ'
 #     words = 'shower curtain rings'
