@@ -256,31 +256,31 @@ class Robot:
 
 if __name__ == '__main__':
 #     proxy = get_valid_proxy('https://www.amazon.com', 'china_ips')
-    proxy = '128.199.240.93:8080'
-    robot = Robot(proxy)
+#     proxy = '128.199.240.93:8080'
+#     robot = Robot(proxy)
+#     
+#     chrome_options = webdriver.ChromeOptions()
+# #     chrome_options.add_argument('--proxy-server=http://%s' % proxy)
+#     chrome_options.add_argument('--proxy-server=%s' % proxy)
+#     
+#     print 'proxy = %s'%proxy
+#     driver = webdriver.Chrome('/Users/spring8743/Documents/workspace/chromedriver', chrome_options=chrome_options)
+# #     driver = webdriver.Chrome('/Users/spring8743/Documents/workspace/chromedriver')
+#     driver.get('https://www.amazon.com')
     
-    chrome_options = webdriver.ChromeOptions()
-#     chrome_options.add_argument('--proxy-server=http://%s' % proxy)
-    chrome_options.add_argument('--proxy-server=%s' % proxy)
     
-    print 'proxy = %s'%proxy
-    driver = webdriver.Chrome('/Users/spring8743/Documents/workspace/chromedriver', chrome_options=chrome_options)
-#     driver = webdriver.Chrome('/Users/spring8743/Documents/workspace/chromedriver')
-    driver.get('https://www.amazon.com')
-    
-    
-#     ip, port = proxy.split(':')
-#     profile = webdriver.FirefoxProfile()
-#     profile.set_preference("network.proxy.type", 1)
-#     profile.set_preference("network.proxy.http", ip)
-#     profile.set_preference("network.proxy.http_port", port)
-#     # set user_agent
-#     profile.set_preference("general.useragent.override", generate_user_agent())
-#  
-#     profile.update_preferences()
-# #     driver = webdriver.Firefox(firefox_profile=profile)
-#     driver = webdriver.Firefox(executable_path = '/Users/spring8743/Documents/workspace/geckodriver/0.19.1/bin/geckodriver')
-    
+    ip, port = proxy.split(':')
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference("network.proxy.type", 1)
+    profile.set_preference("network.proxy.http", ip)
+    profile.set_preference("network.proxy.http_port", port)
+    # set user_agent
+    profile.set_preference("general.useragent.override", generate_user_agent())
+  
+    profile.update_preferences()
+#     driver = webdriver.Firefox(firefox_profile=profile)
+    driver = webdriver.Firefox(executable_path = '/Users/spring8743/Documents/workspace/geckodriver/0.19.1/bin/geckodriver')
+        
 #     asin = 'B002NSMFOQ'
 #     words = 'shower curtain rings'
 #     add_to_cart_probability = 0.7
