@@ -129,8 +129,11 @@ if __name__ == '__main__':
     headers = {'user-agent': generate_user_agent(), 'referer': None}
     try:
 #         r = requests.get('https://www.amazon.com/', headers = headers, proxies = {'http':'http://112.114.96.197:8118'}, timeout = 6)
-        r = requests.get('https://www.baidu.com/', headers = headers, proxies = {'http':'http://112.114.96.197:8118'}, timeout = 6)
+        r = requests.get('https://www.amazon.com/', headers = headers, proxies = {'http':'http://60.189.160.211:4398'}, timeout = 6)
         print 'valid proxy'
+#         print r.headers
+        print r.content
+#         print r.header
     except Exception:
         print 'invalid proxy'
             

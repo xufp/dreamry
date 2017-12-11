@@ -5,31 +5,26 @@ Created on 2017年12月2日
 @author: spring8743
 '''
 
-import threading
-from GetKeywordRank import get_product_page_by_list
-from ListingKeyword import voice_recorder_keyword
-from ListingTitle import voice_recorder_title
-from ListingTitle import country_code
-from ListingTitle import asin
+from keyword_click.KeywordClick import search_product_page_by_list
+from utility.ListingProperty import *
+from utility.Config import *
 from random import shuffle
+import threading
 
-#define the empty threads list
-threads = []
-
-#define how many thread
-thread_num = 3
+#get the whole keyword list multiply the click number    
+voice_recorder_click_keyword = voice_recorder_click_keyword * keyword_click_number
 
 #define how many keywords you want to run in one thread
-words_num = voice_recorder_keyword.__len__() / thread_num 
+words_num = voice_recorder_click_keyword.__len__() / thread_num 
 
 #shuffle the keywords type
-voice_recorder_keyword_new = voice_recorder_keyword[:] # Copy keywords
-shuffle(voice_recorder_keyword) # Shuffle keywords
+voice_recorder_click_keyword_new = voice_recorder_click_keyword[:] # Copy keywords
+shuffle(voice_recorder_click_keyword) # Shuffle keywords
 
 # thread worker function
 def worker(startPoint, endPoint, country_code, asin):
 #     print 'worker:%s'%num
-    get_product_page_by_list(voice_recorder_keyword[startPoint:endPoint], voice_recorder_title, country_code, asin)
+    search_product_page_by_list(voice_recorder_click_keyword[startPoint:endPoint], voice_recorder_title, country_code, asin)
     return 
 
 
@@ -46,4 +41,3 @@ for i  in range(thread_num ):
     t = threading.Thread(target=worker, args =(startPoint, endPoint, country_code, asin,))
     threads.append(t)
     t.start()
-
